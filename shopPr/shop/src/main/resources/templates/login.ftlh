@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BUYSELL</title>
+    <title>Online shop</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
-<h4>Авторизация</h4>
+<h1>Online shop</h1><hr>
+<h4>Authorization</h4>
 <form action="/login" method="post">
-    Эл. почта: <input type="email" name="username"><br><br>
-    Пароль: <input type="password" name="password"><br><br>
+    E-mail: <input type="email" name="username"><br><br>
+    password: <input type="password" name="password"><br><br>
     <input type="hidden" name="hidden" value="hid" >
     <input type="submit" value="Вход"/>
 </form>
-<a href="/registration">Зарегистрироваться</a>
+<a href="/registration">Registration</a>
 </body>
 </html>
