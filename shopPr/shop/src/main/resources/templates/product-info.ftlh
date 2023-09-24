@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BUYSELL</title>
+    <title>Online shop</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
-<h4>Подробная информация о товаре</h4>
+<h1>Online shop</h1><hr>
+<h4>Detailed info about the product</h4>
 <#list images as img>
     <img src="/images/${img.id}" height="60px"/><br><br>
 </#list>
-<b>Название товара: </b>${product.title}<br>
-<b>Описание товара: </b>${product.description}<br>
-<b>Цена: </b>${product.price}<br>
-<b>Город: </b>${product.city}<br>
-<b>Автор: </b>${product.user.name}<br>
+<b>Product title: </b>${product.title}<br>
+<b>Product description: </b>${product.description}<br>
+<b>Price: </b>${product.price}<br>
+<b>City: </b>${product.city}<br>
+<b>Author: </b>${product.user.name}<br>
 </form>
 </body>
 </html>
