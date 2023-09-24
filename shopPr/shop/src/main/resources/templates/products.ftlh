@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BUYSELL</title>
+    <title>Online shop</title>
 </head>
 <body>
-<h1>BUYSELL</h1>
+<h1>Online shop</h1>
 <#if user.email??>
-<h3>Имя пользователя: <i>${user.name}</i></h3>
+<h3>User name: <i>${user.name}</i></h3>
     <form action="/logout" method="post">
-        <input type="submit" value="Выйти"/>
+        <input type="submit" value="Quit"/>
     </form>
 <#else>
-    <a href="/login">Войти</a></h1>
+    <a href="/login">Enter</a></h1>
 </#if>
 <hr>
-<h4>Товары со всей России</h4>
+<h4>Goods from whole world</h4>
 <form action="/" method="get">
-    Поиск по названию объявления: <input type="text" name="title"><br>
-    <input type="submit" value="Поиск"/>
+    Search products by name: <input type="text" name="title"><br>
+    <input type="submit" value="Search"/>
 </form>
 <#list products as product>
     <div>
-        <p><b>${product.title}</b> ${product.price} руб. | <a href="/product/${product.id}">Подробнее...</a></p>
+        <p><b>${product.title}</b> ${product.price} USD. | <a href="/product/${product.id}">Details...</a></p>
     </div>
     <#else>
-    <h3>Товаров нет</h3>
+    <h3>No products found</h3>
 </#list>
 <#if user.email??>
     <hr>
-        <h3>Создать новый товар</h3>
+        <h3>Create a product</h3>
     <form action="/product/create" method="post" enctype="multipart/form-data">
-        Название объявления: <input type="text" name="title"/><br><br>
-        Описание объявления: <input type="text" name="description"/><br><br>
-        Цена: <input type="number" name="price"/><br><br>
-        Город: <input type="text" name="city"/><br><br>
-        Имя: <input type="text" name="author"/><br><br>
-        Первая фотография: <input type="file" name="file1"/><br><br>
-        Вторая фотография: <input type="file" name="file2"/><br><br>
-        Третья фотография: <input type="file" name="file3"/><br><br>
-        <input type="submit" value="Добавить товар"/>
+        Prod name: <input type="text" name="title"/><br><br>
+        Prod description: <input type="text" name="description"/><br><br>
+        Price: <input type="number" name="price"/><br><br>
+        City: <input type="text" name="city"/><br><br>
+        Author name: <input type="text" name="author"/><br><br>
+        First img: <input type="file" name="file1"/><br><br>
+        Second img: <input type="file" name="file2"/><br><br>
+        Third img: <input type="file" name="file3"/><br><br>
+        <input type="submit" value="Enter prod"/>
     </form>
 </#if>
 </body>
